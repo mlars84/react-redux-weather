@@ -18,6 +18,7 @@ export default class SearchBar extends Component {
     this.setState({ term: e.target.value })
   }
 
+  //function that prevents default form submit and fetches weather API data
   onFormSubmit(e) {
     //stops browser from submitting the form
     e.preventDefault()
