@@ -8,6 +8,7 @@ export default class SearchBar extends Component {
     this.state = { term: '' }
 
     //binds onInputChange 'this' to component 'this'
+    //can also use fat arrow in input and remove bind(): `onChange={(e) => this.onInputChange(e)}`
     this.onInputChange = this.onInputChange.bind(this)
   }
 
@@ -17,9 +18,16 @@ export default class SearchBar extends Component {
     this.setState({ term: e.target.value })
   }
 
+  onFormSubmit(e) {
+    //stops browser from submitting the form
+    e.preventDefault()
+
+    //we need to go and fetch weather data
+  }
+
   render() {
     return (
-      <form className="input-group">
+      <form onSubmit={this.onFormSubmit} className="form input-group">
         <input 
           placeholder="Get a five-day forecast in your favorite cities"
           className="form-control"

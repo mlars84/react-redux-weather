@@ -5,7 +5,7 @@ class App extends Component {
   render() {
     return (
       <div className="main">
-        <h1>React-Redux Weather Forecast App</h1>
+        <h1>React-Redux Weather Forecast</h1>
         <SearchBar />
       </div>
     )
