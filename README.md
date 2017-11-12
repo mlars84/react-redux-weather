@@ -9,3 +9,8 @@
 ### Controlled Field/Component
 
 Controlled field is a form element where the value of the input is set by the state of component, not the other way around.
+
+### React-Redux Middleware
+
+Functions that let actions pass, manipulate them, log them or stops them
+Can have many types, steps, etc., but all just functions actions apss through before hitting reducer
