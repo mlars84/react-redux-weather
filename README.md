@@ -1,5 +1,7 @@
 # React-Redux Weather Forecast App
 
+Don't ever manipulate `state` directly: NO this.state = something or state.push()
+
 ## Challenges
 
 1 Figure out a way to make "ajax" requests with Redux (Not from React components)
@@ -14,3 +16,11 @@ Controlled field is a form element where the value of the input is set by the st
 
 Functions that let actions pass, manipulate them, log them or stops them
 Can have many types, steps, etc., but all just functions actions apss through before hitting reducer
+
+Actions Flows enters middlewares, in this case Redux-Promise middleware
+Does the action have a promise as a payload?
+YES:
+  Stop this action
+  After Promise resolves, create a new action and send it to reducer
+NO:
+  Let it go through
