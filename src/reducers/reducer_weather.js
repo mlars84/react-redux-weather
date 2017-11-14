@@ -1,8 +1,6 @@
 import { FETCH_WEATHER } from '../actions/index'
 
 export default function(state = [], action) {
-  console.log('Action received:', action)
-
   switch (action.type) {
     case FETCH_WEATHER:
 
@@ -11,4 +9,5 @@ export default function(state = [], action) {
     return [action.payload.data, ...state]
     //^spread operator does very similar thing, detects and array and adds to it
   }
+  return state
 }
