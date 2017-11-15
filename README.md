@@ -24,3 +24,10 @@ YES:
   After Promise resolves, create a new action and send it to reducer
 NO:
   Let it go through
+
+### Wrap-up
+
+- Lots of Redux. Used Action Creator (fetchWeather) that had a constant for the action type FETCH_WETCH, which cut down on the ability for us to make typos.
+- Middlewares: Used redux-promise to handle a promise we received using axios and we used axios to make ajax request. Middleware automatically detected that we provided a payload of a promise, stopped it and then waited for the promise to resolved. Once resolved, took data coming back from req, stuck it on payload property and sent it to all reducers.
+- Covered reducers, specifically avoiding mutating state. NEVER WANT TO DO state.weather.push() or state = something. Instead we want to return a new object that takes place of existing state. For an array, we used desctructuring of an existing array with spread operator - take an existing array, "flatten it out" and create a new one.
+- Covered sparklines and google maps API. In future try react-google-maps with GoogleMapLoader and GoogleMap
