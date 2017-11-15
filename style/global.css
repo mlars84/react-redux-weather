@@ -7,3 +7,12 @@ html, body, .main {
 .form {
   padding: 2vh 2vw;
 }
+
+td, th {
+  vertical-align: middle !important;
+  text-align: center !important;
+}
+
+.input-group {
+  margin: 20px 0px;
+}
